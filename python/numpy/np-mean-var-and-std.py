@@ -6,12 +6,9 @@
 
 import numpy
 
-if numpy.version.version >= '1.14.':
-    numpy.set_printoptions(legacy='1.13')
-
 n, m = map(int, input().split())
 A = numpy.array([input().split() for i in range(n)], numpy.int)
 
 print(numpy.mean(A, axis=1))
 print(numpy.var(A, axis=0))
-print(numpy.std(A, axis=None))
+print(round(numpy.std(A, axis=None),11))
